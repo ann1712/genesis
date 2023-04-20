@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Standard math utilities missing in the Solidity language.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GenesisNFT_flattened.sol": "Math"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/GenesisNFT_flattened.sol": {
+			"keccak256": "0x242ae040b48f6db5d2990105ebf6cdf6afe9e3643f26365562b6f09f4e08479a",
+			"urls": [
+				"bzz-raw://3b8fb5d030fd7db021420e94234e890006b38b1875235e9b6bbedb1fb4316d80",
+				"dweb:/ipfs/QmQnyN74FLVToZpXAPt5xHvgWoi4vXGUHqxRimvwC4cWRx"
+			]
+		}
+	},
+	"version": 1
+}
