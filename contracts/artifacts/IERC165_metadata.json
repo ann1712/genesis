@@ -58,10 +58,10 @@
 	},
 	"sources": {
 		"contracts/GenesisNFT_flattened.sol": {
-			"keccak256": "0x242ae040b48f6db5d2990105ebf6cdf6afe9e3643f26365562b6f09f4e08479a",
+			"keccak256": "0xcb29eb5a51d1a49310bdf856b9e1d7985bbf0bd334655aef12cbb69b5a01795c",
 			"urls": [
-				"bzz-raw://3b8fb5d030fd7db021420e94234e890006b38b1875235e9b6bbedb1fb4316d80",
-				"dweb:/ipfs/QmQnyN74FLVToZpXAPt5xHvgWoi4vXGUHqxRimvwC4cWRx"
+				"bzz-raw://06994805f83279deeeac6ca456089a4fabe5d6dfb5a4b312513629aaa44cbdbe",
+				"dweb:/ipfs/QmQ5jEkhfLLwnabj8BkTM6LQ9qEEaSjCbyVvHmP9u5gEGs"
 			]
 		}
 	},

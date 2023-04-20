@@ -9,7 +9,7 @@ contract GenesisNFT is ERC721, Ownable{
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
     uint256[3] public mintPrice = [0.001 ether, 0.002 ether, 0.003 ether];
-    uint256[3] public mintTime = [1681974000, 1681975200, 1681976400];
+    uint256[3] public mintTime = [1681984800, 1681986000, 1681987200];
     uint public mintInterval = 20 minutes;
     uint256[3] public mintRound = [5, 10, 15];
     uint256 public TOTAL_SUPPLY = 30;
@@ -25,7 +25,7 @@ contract GenesisNFT is ERC721, Ownable{
 
     mapping (address => uint256) public waitList;
 
-    mapping (address => uint256[]) public ownerToGenesis;
+    mapping (address => uint256[3]) public ownerToGenesis;
 
     constructor() ERC721("Genesis NFT", "GNS") {
 
@@ -40,8 +40,7 @@ contract GenesisNFT is ERC721, Ownable{
             require(ownerToGenesis[msg.sender][round-1] < whiteListLevel[msg.sender], "Limit NFT for your level!");
         }
         else if (round == 2){
-            require(whiteListLevel[msg.sender] > 0, "You'r not in whitelist");
-            require(waitList[msg.sender] > 0, "You'r not in waitList");
+            require(waitList[msg.sender] > 0, "You'r not in wait list");
             require(ownerToGenesis[msg.sender][round-1] < waitList[msg.sender], "You only mint 1 NFT in wait round");
         } else {
             require(ownerToGenesis[msg.sender][round-1] < 1, "You only mint 1 NFT in public round");
@@ -78,11 +77,11 @@ contract GenesisNFT is ERC721, Ownable{
     }
 
      // Get current Round
-    function _getCurrentRound() private view returns (uint256){
+    function _getCurrentRound() public view returns (uint256){
         for(uint256 i = 0; i < 3; i++){
             if(block.timestamp >= mintTime[i] && block.timestamp < mintTime[i] + mintInterval) return i+1;
         }
-        return 3;
+        return 0; 
     }
 
      //Withdraw
